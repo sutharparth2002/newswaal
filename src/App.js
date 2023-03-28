@@ -1,24 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
-
+// import Content from './components/Content';
+import Navbar from './components/Navbar'
+import './App.css'
+import Home from './components/Home';
+import Business from './components/Buisness';
+import Cricket from './components/Cricket';
+import Science from './components/Science';
+import Health from './components/Health';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <>
+    < div className='cls' style={{background:"#343a40"}}>
+      <Navbar/>
+      <Home/>
+      
+      {/* <Business/> */}
+      {/* <Cricket/> */}
+      {/* <Science/> */}
+      {/* <Health/> */}
+      <footer   style={{background:"#212529",color:"white",textAlign:"center" , height:"50px",margin:"10px 0px" ,bottom:"0"}}>
+        <div style={{display:"flex",justifyContent:"center",alignItems:"center",height:"50px"}}>This is Footer.</div>
+      </footer>
+      
     </div>
+      </>
   );
 }
 
