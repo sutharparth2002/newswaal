@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 export default function Business() {
-   const [headlines,setHeadlines]=useState([]);
+   const [headlines,setHeadlines]=useState();
     const getdata= async ()=>{
         try {
-            const res = await axios.get("https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=53316e173d804d9abd385b7961b08a28")
+            const res = await axios.get("http://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=53316e173d804d9abd385b7961b08a28")
             .then((resp)=>setHeadlines(resp.data.articles));
         } catch (error) {
             console.log(error);
